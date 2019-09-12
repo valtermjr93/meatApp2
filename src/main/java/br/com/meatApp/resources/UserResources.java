@@ -30,7 +30,7 @@ public class UserResources {
 		List<User> users = userService.findAll();
 		return ResponseEntity.ok().body(users);
 	}
-	@RequestMapping(value="{id}", method=RequestMethod.GET)
+	@RequestMapping(value="id/{id}", method=RequestMethod.GET)
 	public ResponseEntity<User> findById(@PathVariable Integer id){
 		User user = userService.findById(id);
 		return ResponseEntity.ok().body(user);
